@@ -1,0 +1,678 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'open sans';
+}
+.contenedor {
+    padding: 60px 0;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+.titulo {
+    color: #030303;
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 60px;
+}
+header {
+    width: 100%;
+    height: 600px;
+    background: #F3FF90;
+    background: -webkit-linear-gradient(to right, hsla(180, 67%, 67%, 0.459), hsl(165, 82%, 60%)), url(https://i.postimg.cc/FKPS1Qzw/imgr3.jpg);
+    background: linear-gradient(to right, hsla(180, 67%, 67%, 0.459), hsl(165, 82%, 60%)), url(https://i.postimg.cc/FKPS1Qzw/imgr3.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    position: relative;
+}
+  .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 5vh;
+    font-size: 24px;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  } 
+  .btn-1,
+  .btn-2 {
+    width: 300px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  footer a,
+  .btn-1 a,
+  .btn-2 a {
+    text-decoration: none;
+    border: 2px solid #000101;
+    padding: 15px;
+    color: #000;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    display: inline-block;
+  }
+  span {
+    position: relative;
+    z-index: 3;
+  }
+  .btn-1 a::before {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: -2px;
+    width: calc(100% + 6px);
+    height: calc(100% - 10px);
+    background-color: #ffffff;
+    transition: all 0.5s ease-in-out;
+    transform: scaleY(1);
+  }
+  .btn-1 a:hover::before,
+  .btn-2 a:hover::before {
+    transform: scaleY(0);
+  }
+  .btn-1 a::after {
+    content: "";
+    position: absolute;
+    left: 5px;
+    top: -5px;
+    width: calc(100% - 10px);
+    height: calc(100% + 10px);
+    background-color: #ffffff;
+    transition: all 0.5s ease-in-out;
+    transform: scaleX(1);
+  }
+  .btn-1 a:hover::after,
+  .btn-2 a:hover::after {
+    transform: scaleX(0);
+  }
+  .btn-2 a {
+    color: #ffffff;
+    transition: all 0.5s ease-in-out;
+  }
+  .btn-2 a:hover {
+    color: #000000;
+    transition: all 0.5s ease-in-out;
+  }
+  .btn-2 a::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #11999E;
+    transition: all 0.5s ease-in-out;
+    transform: scaleY(1);
+  }
+  .btn-2 a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #11999E;
+    transition: all 0.5s ease-in-out;
+    transform: scaleX(1);
+}
+nav{
+    text-align: right;
+    padding: 30px 50px 0 0;
+}
+nav > a{
+    color:#030c0c;
+    font-weight: 300;
+    text-decoration: none;
+    margin-right: 10px;
+}
+nav > a:hover{
+    text-decoration: underline;
+}
+header .textos-header{
+    display: flex;
+    height: 430px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.textos-header h1{
+    font-size: 50px;
+    color:#fff;
+}
+.textos-header h2{
+    font-size: 30px;
+    font-weight: 300;
+    color:#fff;
+}
+.wave{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+main .sobre-nosotros{
+    padding: 30px 0 60px 0;
+}
+.contenedor-sobre-nosotros{
+    display: flex;
+    justify-content: space-evenly;
+}
+.imagen-about-us{
+    width: 48%;
+}
+.sobre-nosotros .contenido-textos{
+    width: 48%;
+}
+.contenido-textos h3{
+    margin-bottom: 15px;
+}
+.contenido-textos h3 span{
+    background: #30E3CA;
+    color: #fff;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+    margin-right: 5px;
+}
+.contenido-textos p{
+    padding: 0px 0px 30px 15px;
+    font-weight: 300;
+    text-align: justify;
+}
+.portafolio{
+    background: #11999E;
+}
+.galeria-port{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.imagen-port{
+    width: 24%;
+    margin-bottom: 10px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, .5);
+}
+.imagen-port > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.hover-galeria{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transform: scale(0);
+    background: hsla(180, 67%, 67%, 0.459);
+    transition: transform .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.hover-galeria img{
+    width: 50px;
+}
+.hover-galeria p{
+    color: #fff;
+}
+.imagen-port:hover .hover-galeria{
+    transform: scale(1);
+}
+.control-cruz {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.horizontal {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+}
+.up, .down, .left, .right {
+    width: 70px; 
+    height: 70px;
+    font-size: 18px;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+.up:hover, .down:hover, .left:hover, .right:hover {
+    background-color: #0056b3;
+}
+.up:active, .down:active, .left:active, .right:active {
+    transform: scale(0.9);
+}
+.botones{
+    background: #30E3CA;
+    padding-top: 20px;
+    padding-block-end: 5%;
+}
+.pulse-effect {
+    border: none;
+    color: white;
+    padding: 14px 28px;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: #336780; 
+    transition: transform 0.3s ease-in-out; 
+  }
+  .pulse-effect:hover {
+    background-color: #39b4d3;  
+  }
+  
+  .pulse-effect:active {
+    transform: scale(0.9); 
+  }
+.botonesA{
+    background: #11999E;
+    padding-top: 20px;
+    padding-block-end: 5%;
+}
+.btnA {
+    border: none; 
+    color: black; 
+    padding: 14px 28px; 
+    cursor: pointer; 
+    border-radius: 5px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 10vh;
+    text-align: center; 
+}
+   bb.primary {background-color: white; border: 2px solid #007bff;} 
+  .primary:hover {background: #0b7dda; color: white;}
+  .secondary {background-color: white; border: 2px solid #e7e7e7;} 
+  .secondary:hover {background: #ddd; color: white;}
+.cards{
+    display: flex;
+    justify-content: space-evenly;
+}
+.cards .card{
+    background: #11999E;
+    display: flex;
+    width: 46%;
+    height: 200px;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 5px;
+    box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.6);
+}
+.cards .card img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 3px solid #fff;
+    border-radius: 50%;
+    display: block;
+}
+.cards .card > .contenido-texto-card{
+    width: 60%;
+    color: #fff;
+}
+.cards .card > .contenido-texto-card p{
+    font-weight: 300;
+    padding-top: 5px;
+}
+.about-services{
+    background: #f2f2f2;
+    padding-bottom: 30px;
+}
+.servicio-cont{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.servicio-ind{
+    width: 28%;
+    text-align: center;
+}
+.servicio-ind img{
+    width: 90%;
+}
+.servicio-ind h3{
+    margin: 10px 0;
+}
+.servicio-ind p{
+    font-weight: 300;
+    text-align: justify;
+}
+footer{
+    background: #40514E;
+    padding: 60px 0 30px 0;
+    margin: auto;
+    overflow: hidden;
+}
+.contenedor-footer{
+    display: flex;
+    width: 90%;
+    justify-content: space-evenly;
+    margin: auto;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #fff;
+}
+.content-foo{
+    text-align: center;
+}
+.content-foo h4{
+    color: #fff;
+    border-bottom: 3px solid #fff;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+}
+.content-foo p{
+    color: #ccc;
+}
+.titulo-final{
+    text-align: center;
+    font-size: 24px;
+    margin: 20px 0 0 0;
+    color: #fff;
+}
+@media screen and (max-width:900px){
+    header{
+        background-position: center;
+    }
+    .contenedor-sobre-nosotros{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .sobre-nosotros .contenido-textos{
+        width: 90%;
+    }
+    .imagen-about-us{
+        width: 90%;
+    }
+    .imagen-port{
+        width: 44%;
+    }
+    .cards{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .cards .card{
+        width: 90%;
+    }
+    .cards .card:first-child{
+        margin-bottom: 30px;
+    }
+    .servicio-cont{
+        justify-content: center;
+        flex-direction: column;
+    }
+    .servicio-ind{
+        width: 100%;
+        text-align: center;
+    }
+    .servicio-ind:nth-child(1), .servicio-ind:nth-child(2){
+        margin-bottom: 60px;
+    }
+    .servicio-ind img{
+        width: 90%;
+    }
+}
+@media screen and (max-width:500px){
+    nav{
+        text-align: center;
+        padding: 30px 0 0 0;
+    }
+    nav > a{
+        margin-right: 5px;
+    }
+    .textos-header h1{
+        font-size: 35px;
+    }
+    .textos-header h2{
+        font-size: 20px;
+    }
+    .imagen-about-us{
+        margin-bottom: 60px;
+        width: 99%;
+    }
+    .sobre-nosotros .contenido-textos{
+        width: 95%;
+    }
+    .imagen-port{
+        width: 95%;
+    }
+    .cards .card{
+        height: 450px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .cards .card img{
+        width: 90px;
+        height: 90px;
+    }
+    .contenedor-footer{
+        flex-direction: column;
+        border: none;
+    }
+    .content-foo{
+        margin-bottom: 20px;
+        text-align: center;
+    }
+    .content-foo h4{
+        border: none;
+    }
+    .content-foo p{
+        color: #ccc;
+        border-bottom: 1px solid #f2f2f2;
+        padding-bottom: 20px;
+    }
+    .titulo-final{
+        font-size: 20px;
+    }
+}
+    </style>
+    <title>Robot Rover-KLAB</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet"> 
+</head>
+
+<body>
+    <header>
+        <nav>
+            <a href="#inicio">Inicio</a>
+            <a href="#acerca">Acerca de</a>
+            <a href="#portafolio">Portafolio</a>
+            <a href="#bot1">Controles</a>
+            <a href="#participantes">Participantes</a>
+            <a href="#contacto">Contacto</a>
+        </nav>
+        <section class="textos-header" id="inicio">
+            <h1>Proyecto Robot Rover</h1>
+            <img src="https://i.postimg.cc/rpv8fhPK/photo-2024-11-06-00-37-34-Photoroom.png" alt="">
+            <h1>Bienvenidos</h1>
+        </section>
+        <div class="wave" style="height: 150px; overflow: hidden;"><svg viewBox="0 0 500 150" preserveAspectRatio="none"
+                style="height: 100%; width: 100%;">
+                <path d="M0.00,49.98 C150.00,150.00 349.20,-50.00 500.00,49.98 L500.00,150.00 L0.00,150.00 Z"
+                    style="stroke: none; fill: #fff;"></path>
+            </svg></div>
+    </header>
+    <main>
+        <div class="center">
+            <div class="btn-2">
+              <a href="#bot1"><span>Modo Manual</span></a>
+            </div>
+        </div>
+        <br>
+        <section class="controles" id=bot1>
+            <div class="botones">
+                <h2 class="titulo">Controles Manual</h2>
+                <div class="control-cruz">
+                    <button onclick="enviarComando('/MM_avanzar')" class="btn pulse-effect up">↑</button>
+                    <div class="horizontal">
+                        <button onclick="enviarComando('/MM_izquierda')" class="btn pulse-effect left">←</button>
+                        <button onclick="enviarComando('/MM_detener')" class="btn pulse-effect left">■</button>
+                        <button onclick="enviarComando('/MM_derecha')" class="btn pulse-effect right">→</button>
+                    </div>
+                    <button onclick="enviarComando('/MM_retroceder')" class="btn pulse-effect down">↓</button>
+                </div>
+            </div>
+        </section>
+        <script>
+            function enviarComando(url) {
+                fetch(url)
+                    .then(response => {
+                        if (response.ok) {
+                            console.log(`Comando enviado: ${url}`);
+                        } else {
+                            console.error('Error al enviar el comando:', response.statusText);
+                        }
+                    })
+                    .catch(error => console.error('Error de red:', error));
+            }
+        </script>
+        <section class="contenedor sobre-nosotros" id="acerca">
+            <h2 class="titulo">Nuestro producto</h2>
+            <div class="contenedor-sobre-nosotros">
+                <img src="https://i.postimg.cc/26MBFF4w/imgr1.jpg" alt="" class="imagen-about-us">
+                <div class="contenido-textos">
+                    <h3><span>1</span>Proyecto K-Lab</h3>
+                    <p>Como parte del Proyecto K-Lab 2.0, un esfuerzo colaborativo entre la Universidad Mayor de San Andrés (UMSA) y la Universidad Myongji de Corea del Sur, he desarrollado un rover diseñado para moverse. Este proyecto se enmarca en el Hub de Innovación Universitario, respaldado por la Agencia Nacional de Promoción de la Industria TI (NIPA) del Gobierno de Corea del Sur, el cual ha impulsado la creación del laboratorio K-Lab 2.0 en la Facultad de Ingeniería de la UMSA.</p>
+                    <h3><span>2</span>Robot Rover</h3>
+                    <p>El rover, creado en el laboratorio K-Lab, cuenta con tecnología ESP32 , lo que permite la navegación con precisión y eficiencia. Todo el diseño estructural del robot fue modelado y fabricado mediante impresión 3D, aprovechando las capacidades del K-Lab para innovar en robótica y tecnología digital. Este espacio ha sido clave para la colaboración entre estudiantes y expertos, promoviendo un enfoque conjunto de innovación tecnológica y soluciones prácticas a problemas actuales.
+                    </p>
+                </div>
+            </div>
+        </section>
+        <section class="portafolio" id="portafolio">
+            <div class="contenedor">
+                <h2 class="titulo">Portafolio</h2>
+                <div class="galeria-port">
+                    <div class="imagen-port">
+                        <img src="https://i.postimg.cc/26MBFF4w/imgr1.jpg" alt="">
+                        <div class="hover-galeria">
+                            <img src="https://i.postimg.cc/hG4xSGD9/icono1.png" alt="">
+                            <p>Nuestro trabajo</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="https://i.postimg.cc/KzRMMsgj/imgr2.jpg" alt="">
+                        <div class="hover-galeria">
+                            <img src="https://i.postimg.cc/hG4xSGD9/icono1.png" alt="">
+                            <p>Nuestro trabajo</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="https://i.postimg.cc/FKPS1Qzw/imgr3.jpg" alt="">
+                        <div class="hover-galeria">
+                            <img src="https://i.postimg.cc/hG4xSGD9/icono1.png" alt="">
+                            <p>Nuestro trabajo</p>
+                        </div>
+                    </div>
+                    <div class="imagen-port">
+                        <img src="https://i.postimg.cc/nhGBbmJF/imgr4.jpg" alt="">
+                        <div class="hover-galeria">
+                            <img src="https://i.postimg.cc/hG4xSGD9/icono1.png" alt="">
+                            <p>Nuestro trabajo</p>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </section>
+        <section class="clientes contenedor" id="participantes">
+            <h2 class="titulo">Integrantes del Grupo 4</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="contenido-texto-card">
+                        <h4>Gerson Mauricio Flores Gutierrez</h4>
+                        <p>Estudiante de la carrera de Informatica</p>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="cards">
+                <div class="card">
+                    <div class="contenido-texto-card">
+                        <h4>Anderson Williams Cochi Chambi</h4>
+                        <p>Estudiante de la carrera de Ingenieria Electronica</p>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="cards">
+                <div class="card">
+                    <div class="contenido-texto-card">
+                        <h4>Joel Adrian Condori Sirpa</h4>
+                        <p>Estudiante de la carrera de Aeronautica</p>
+                    </div>
+                </div>  
+            </div>
+            <br>
+            
+        </section>
+        <section class="about-services">
+            <div class="contenedor">
+                <h2 class="titulo">Conocimientos Obtenidos</h2>
+                <div class="servicio-cont">
+                    <div class="servicio-ind">
+                        <h3>Diseño 3D con Fusion 360</h3>
+                        <p>Aprendimos a modelar componentes en Fusion 360 para la impresión 3D, entendiendo el diseño de piezas físicas que se integran en el rover. Esto incluye habilidades en diseño paramétrico, manipulación de geometrías 3D y preparación de archivos para impresión.</p>
+                    </div>
+                    <div class="servicio-ind">
+                        <h3>Electrónica con Arduino</h3>
+                        <p>Obtuvimos una base en electrónica aplicada usando Arduino, lo que te permitió manejar sensores y circuitos para el rover. Este conocimiento te facilitó comprender conceptos de programación embebida y control de hardware.</p>
+                    </div>
+                    <div class="servicio-ind">
+                        <h3>Control de motores con ESP32</h3>
+                        <p>Aprendimos a controlar motores mediante la ESP32, entendiendo tanto la conexión y programación de los motores como el control de movimiento del rover.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="contenedor-footer" id="contacto">
+            <div class="content-foo">
+                <h4>Facebook</h4>
+                <p><a href="https://www.facebook.com/KLabBolivia" target="_blank">K-Lab Bolivia</a></p>
+            </div>
+            <div class="content-foo">
+                <h4>Email</h4>
+                <p><a href="mailto:gersonfloresgato18@gmail.com">gersonfloresgato18@gmail.com</a></p>
+            </div>
+            <div class="content-foo">
+                <h4>Location</h4>
+                <p><a href="https://www.google.com/maps/search/?api=1&query=Plaza+Obelisco+Av+Camacho+La+Paz+Bolivia" target="_blank">Plaza Obelisco, Av. Camacho, La Paz, Bolivia</a></p>
+            </div>
+            </div>
+        </div>
+        <h2 class="titulo-final">&copy; Triwot | Ander</h2>
+    </footer>
+</body>
+</html>
